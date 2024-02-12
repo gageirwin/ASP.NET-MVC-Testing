@@ -34,9 +34,9 @@ namespace WebApplication1.Controllers
                     Console.WriteLine($"Title: {item.TITLE}, Price: {item.PRICE}, Special: {item.SPECIAL}");
                 else
                 {
-                    Console.WriteLine($"Title: {item.TITLE}, Price: {item.PRICE}, Special: {item.SPECIAL}, Options: {item.OPTIONS.Length}");
+                    Console.WriteLine($"Title: {item.TITLE}, Price: {item.PRICE}, Special: {item.SPECIAL}, Options: {item.OPTIONS.THING.Length}");
 
-                    foreach (var option in item.OPTIONS)
+                    foreach (var option in item.OPTIONS.THING)
                     {
                         Console.WriteLine($"\tindex: {option.index}, value: {option.Value}");
                     }
