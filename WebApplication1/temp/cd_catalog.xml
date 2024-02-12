@@ -165,23 +165,27 @@
     <ARTIST>Kim Larsen</ARTIST>
     <COUNTRY>EU</COUNTRY>
     <COMPANY>Medley</COMPANY>
-    <PRICE>7.80</PRICE>
+    <PRICE>FREE</PRICE>
     <YEAR>1983</YEAR>
+	  <NEW>
+		  <ITEM>1</ITEM>
+		  <ITEM>56</ITEM>
+	  </NEW>
   </CD>
   <CD>
     <TITLE>Pavarotti Gala Concert</TITLE>
     <ARTIST>Luciano Pavarotti</ARTIST>
     <COUNTRY>UK</COUNTRY>
     <COMPANY>DECCA</COMPANY>
-    <PRICE>9.90</PRICE>
     <YEAR>1991</YEAR>
+	  <NEWNEW>hello!</NEWNEW>
   </CD>
   <CD>
     <TITLE>The dock of the bay</TITLE>
     <ARTIST>Otis Redding</ARTIST>
     <COUNTRY>USA</COUNTRY>
     <COMPANY>Stax Records</COMPANY>
-    <PRICE>7.90</PRICE>
+    <PRICE></PRICE>
     <YEAR>1968</YEAR>
   </CD>
   <CD>
@@ -191,6 +195,7 @@
     <COMPANY>Elektra</COMPANY>
     <PRICE>7.20</PRICE>
     <YEAR>1985</YEAR>
+	  <OPTIONS></OPTIONS>
   </CD>
   <CD>
     <TITLE>Red</TITLE>
@@ -201,8 +206,8 @@
     <YEAR>1987</YEAR>
 	<SPECIAL>Yes</SPECIAL>
 	  <OPTIONS>
-		  <THING1>thing 1</THING1>
-		  <THING2>thing 2</THING2>
+		  <THING index="5555">thing 1</THING>
+		  <THING index="66666">thing 2</THING>
 	  </OPTIONS>
   </CD>
   <CD>
@@ -212,7 +217,8 @@
     <PRICE>8.20</PRICE>
     <YEAR>1987</YEAR>
 	  <OPTIONS>
-		  <THING1>thing 1</THING1>
+		  <THING index="77777">thing 1</THING>
+		  <NEWTHING>TEST</NEWTHING>
 	  </OPTIONS>
   </CD>
 <script id="bw-fido2-page-script"/></CATALOG>
