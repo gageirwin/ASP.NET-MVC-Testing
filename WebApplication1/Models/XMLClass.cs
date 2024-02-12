@@ -59,13 +59,17 @@ namespace WebApplication1.Models
 
         private string cOMPANYField;
 
-        private decimal pRICEField;
+        private string pRICEField;
 
         private ushort yEARField;
 
         private string sPECIALField;
 
-        private CATALOGCDOPTIONS oPTIONSField = new CATALOGCDOPTIONS();
+        private CATALOGCDTHING[] oPTIONSField;
+
+        private string nEWNEWField;
+
+        private byte[] nEWField;
 
         /// <remarks/>
         public string TITLE
@@ -120,7 +124,7 @@ namespace WebApplication1.Models
         }
 
         /// <remarks/>
-        public decimal PRICE
+        public string PRICE
         {
             get
             {
@@ -159,7 +163,8 @@ namespace WebApplication1.Models
         }
 
         /// <remarks/>
-        public CATALOGCDOPTIONS OPTIONS
+        [System.Xml.Serialization.XmlArrayItemAttribute("THING", IsNullable = false)]
+        public CATALOGCDTHING[] OPTIONS
         {
             get
             {
@@ -170,42 +175,72 @@ namespace WebApplication1.Models
                 this.oPTIONSField = value;
             }
         }
+
+        /// <remarks/>
+        public string NEWNEW
+        {
+            get
+            {
+                return this.nEWNEWField;
+            }
+            set
+            {
+                this.nEWNEWField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute()]
+        [System.Xml.Serialization.XmlArrayItemAttribute("ITEM", IsNullable = false)]
+        public byte[] NEW
+        {
+            get
+            {
+                return this.nEWField;
+            }
+            set
+            {
+                this.nEWField = value;
+            }
+        }
     }
 
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class CATALOGCDOPTIONS
+    public partial class CATALOGCDTHING
     {
 
-        private string tHING1Field;
+        private uint indexField;
 
-        private string tHING2Field;
+        private string valueField;
 
         /// <remarks/>
-        public string THING1
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public uint index
         {
             get
             {
-                return this.tHING1Field;
+                return this.indexField;
             }
             set
             {
-                this.tHING1Field = value;
+                this.indexField = value;
             }
         }
 
         /// <remarks/>
-        public string THING2
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value
         {
             get
             {
-                return this.tHING2Field;
+                return this.valueField;
             }
             set
             {
-                this.tHING2Field = value;
+                this.valueField = value;
             }
         }
     }
