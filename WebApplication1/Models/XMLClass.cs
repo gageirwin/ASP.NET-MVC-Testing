@@ -65,7 +65,7 @@ namespace WebApplication1.Models
 
         private string sPECIALField;
 
-        private CATALOGCDTHING[] oPTIONSField;
+        private CATALOGCDOPTIONS oPTIONSField;
 
         private string nEWNEWField;
 
@@ -163,8 +163,7 @@ namespace WebApplication1.Models
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("THING", IsNullable = false)]
-        public CATALOGCDTHING[] OPTIONS
+        public CATALOGCDOPTIONS OPTIONS
         {
             get
             {
@@ -209,7 +208,47 @@ namespace WebApplication1.Models
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class CATALOGCDTHING
+    public partial class CATALOGCDOPTIONS
+    {
+
+        private CATALOGCDOPTIONSTHING[] tHINGField;
+
+        private string nEWTHINGField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("THING")]
+        public CATALOGCDOPTIONSTHING[] THING
+        {
+            get
+            {
+                return this.tHINGField;
+            }
+            set
+            {
+                this.tHINGField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NEW-THING")]
+        public string NEWTHING
+        {
+            get
+            {
+                return this.nEWTHINGField;
+            }
+            set
+            {
+                this.nEWTHINGField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class CATALOGCDOPTIONSTHING
     {
 
         private uint indexField;
